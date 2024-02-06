@@ -37,10 +37,6 @@ jobs:
             cx_client_id: ${{ secrets.CLIENT_ID }}
             cx_client_secret: ${{ secrets.SECRET }}
             additional_params: --debug --report-format json,sonar 
-      - name: checkin Working directory
-        run: |
-          echo ${{ github.workspace }}
-          echo $GITHUB_WORKSPACE
       - name: Sonar analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
