@@ -49,5 +49,5 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=margaritalm -Dsonar.projectKey=margaritalm_maven-samples -Dsonar.externalIssuesReportPaths=./cx_result_sonar.json
+        run: mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=margaritalm -Dsonar.projectKey=margaritalm_maven-samples -Dsonar.externalIssuesReportPaths=${{ github.workspace }}\cx_result_sonar.json
 
